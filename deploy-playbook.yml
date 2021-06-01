@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Install Docker
+    package: 
+      name: docker
+      state: present
+  - name: start docker service if not running
+    service:
+      name: docker
+      state: started
+      enabled: yes
+  - name: deploy application
+    command: docker run -d -p 8888:8888 --name app-deploy deepanshu97971/case1:1.0
