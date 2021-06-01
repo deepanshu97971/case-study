@@ -11,5 +11,9 @@
       name: docker
       state: started
       enabled: yes
+  - name: Delete a container if it is running/stopped else it will skip if no such container
+    docker_container:
+       name: app-deploy
+       state: absent
   - name: deploy application
     command: docker run -d -p 8888:8888 --name app-deploy deepanshu97971/case-study:1.0
