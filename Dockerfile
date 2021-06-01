@@ -1,5 +1,5 @@
 FROM centos
 RUN yum install -y java
-ADD target/my-test-app-0.0.1-SNAPSHOT.jar my-test-app.jar
+ADD target/bootcamp-0.0.1-SNAPSHOT.jar bootcamp-app.jar
 EXPOSE 8888
-ENTRYPOINT ["java","-jar","my-test-app.jar"]
+ENTRYPOINT ["java","-jar","bootcamp-app.jar"]
