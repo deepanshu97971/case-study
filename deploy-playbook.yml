@@ -12,4 +12,4 @@
       state: started
       enabled: yes
   - name: deploy application
-    command: docker run -d -p 8888:8888 --name app-deploy deepanshu97971/case1:1.0
+    command: docker run -d -p 8888:8888 --name app-deploy deepanshu97971/case-study:1.0
